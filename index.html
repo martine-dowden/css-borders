@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>borders</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+  <h1>CSS Borders</h1>
+
+  <section>
+    <h2><code>border-style</code> Values</h2>
+
+    <div class="container border-style">
+
+      <div class="example" style="border-style: hidden">
+        <code>hidden</code>
+      </div>
+
+      <div class="example" style="border-style: dotted">
+        <code>dotted</code>
+      </div>
+
+      <div class="example" style="border-style: dashed">
+        <code>dashed</code>
+      </div>
+
+      <div class="example" style="border-style: solid">
+        <code>solid</code>
+      </div>
+
+      <div class="example" style="border-style: double">
+        <code>double</code>
+      </div>
+
+      <div class="example" style="border-style: groove">
+        <code>groove</code>
+      </div>
+
+      <div class="example" style="border-style: ridge">
+        <code>ridge</code>
+      </div>
+
+      <div class="example" style="border-style: inset">
+        <code>inset</code>
+      </div>
+
+      <div class="example" style="border-style: outset">
+        <code>outset</code>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="logical">
+
+    <h2>Logical Border Properties</h2>
+
+    <h3><code>border-block-start: solid 5px #ffde96</code></h3>
+    <div class="container logical-start">
+
+      <div>
+        <div class="example" style="writing-mode: horizontal-tb;">
+          Hello World
+        </div>
+        <code>writing-mode: horizontal-tb</code>
+      </div>
+
+      <div>
+        <div class="example" style="writing-mode: vertical-rl">
+          Hello World
+        </div>
+        <code>writing-mode: vertical-lr</code>
+      </div>
+
+      <div>
+        <div class="example" style="writing-mode: vertical-lr">
+          Hello World
+        </div>
+        <code>writing-mode: vertical-lr</code>
+      </div>
+
+      <div>
+        <div class="example" style="writing-mode: sideways-rl">
+          Hello World
+        </div>
+        <code>writing-mode: sideways-rl</code>
+      </div>
+
+      <div>
+        <div class="example" style="writing-mode: sideways-lr">
+          Hello World
+        </div>
+        <code>writing-mode: sideways-lr</code>
+      </div>
+
+    </div>
+
+    <h3><code>border-block-end: solid 5px #bad8ff</code></h3>
+    <div class="container logical-end">
+      <div>
+        <div class="example logical logical-end" style="writing-mode: horizontal-tb;">
+          Hello World
+        </div>
+        <code>writing-mode: horizontal-tb</code>
+      </div>
+
+      <div>
+        <div class="example logical logical-end" style="writing-mode: vertical-rl">
+          Hello World
+        </div>
+        <code>writing-mode: vertical-lr</code>
+      </div>
+
+      <div>
+        <div class="example logical logical-end" style="writing-mode: vertical-lr">
+          Hello World
+        </div>
+        <code>writing-mode: vertical-lr</code>
+      </div>
+
+      <div>
+        <div class="example logical logical-end" style="writing-mode: sideways-rl">
+          Hello World
+        </div>
+        <code>writing-mode: sideways-rl</code>
+      </div>
+
+      <div>
+        <div class="example logical logical-end" style="writing-mode: sideways-lr">
+          Hello World
+        </div>
+        <code>writing-mode: sideways-lr</code>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Border Image Using Linear Gradient</h2>
+    <div class="container">
+      <div class="example gradient"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Border Image Using an Image File</h2>
+    <div class="container border-image">
+      <div class="example">
+        <code>aspect-ratio: 1:1</code>
+      </div>
+      <div class="example rectangle">
+        <code>aspect-ratio: 1:3</code>
+      </div>
+    </div>
+
+    <h3><code>border-image-repeat</code></h3>
+
+    <div class="container border-image border-image-repeat">
+      <div class="example" style="border-image-repeat: stretch;">
+        <code>stretch</code>
+      </div>
+      <div class="example" style="border-image-repeat: repeat;">
+        <code>repeat</code>
+      </div>
+      <div class="example" style="border-image-repeat: round;">
+        <code>round</code>
+      </div>
+      <div class="example" style="border-image-repeat: space;">
+        <code>space</code>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Outline</h2>
+
+    <div class="container outline">
+      <div class="example">1</div>
+      <div class="example">2</div>
+      <div class="example">3</div>
+    </div>
+
+    <h3>Outline Styles</h3>
+    <div class="container outline-styles">
+
+      <div class="example" style="outline-style: none;">
+        <code>none</code>
+      </div>
+
+      <div class="example" style="outline-style: dotted;">
+        <code>dotted</code>
+      </div>
+
+      <div class="example" style="outline-style: solid;">
+        <code>solid</code>
+      </div>
+
+      <div class="example" style="outline-style: groove;">
+        <code>groove</code>
+      </div>
+
+      <div class="example" style="outline-style: inset;">
+        <code>inset</code>
+      </div>
+    </div>
+
+    <h3>Offset</h3>
+
+    <div class="container offset">
+
+      <div class="example gradient" style="border-image-outset: 20px;">
+        <code>border-image-outset: 20px</code>
+      </div>
+      <div class="example gradient" style="border-image-outset: -30px;">
+        <code>border-image-outset: -30px <br><br> /* no effect */</code>
+      </div>
+      <div class="example outline" style="outline-offset: 10px;">
+        <code>outline-offset: 10px</code>
+      </div>
+      <div class="example outline" style="outline-offset: -30px;">
+        <code>outline-offset:<br>-30px</code>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Box Shadow</h2>
+
+    <div class="container box-shadow">
+      <div class="example"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Shapes</h2>
+    <h3><code>border-radius</code></h3>
+    <div class="container shape circle">
+      <div class="example border"><code>border</code></div>
+      <div class="example gradient">
+        <code>
+          border-image
+          linear-gradient
+        </code>
+      </div>
+      <div class="example border-image">
+        <code>
+          border-image
+          image file
+        </code>
+      </div>
+      <div class="example outline"><code>outline</code></div>
+      <div class="example box-shadow"><code>box-shadow</code></div>
+    </div>
+
+    <h3><code>clip-path</code></h3>
+
+    <div class="container shape heart">
+      <div class="example border"><code>border</code></div>
+      <div class="example gradient">
+        <code>
+          border-image
+          linear-gradient
+        </code>
+      </div>
+      <div class="example border-image">
+        <code>
+          border-image
+          image file
+        </code>
+      </div>
+      <div class="example outline"><code>outline</code></div>
+      <div class="example box-shadow"><code>box-shadow</code></div>
+    </div>
+  </section>
+
+  <section>
+    <h2><code>filter: drop-shadow()</code></h2>
+
+    <div class="container shape heart drop-shadow">
+      <div class="example"></div>
+      <div class="heart-group">
+        <div class="example"></div>
+        <div class="example small"></div>
+      </div>
+      <div class="example"></div>
+    </div>
+
+  </section>
+
+</body>
+
+</html>

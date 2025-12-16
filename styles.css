@@ -1,0 +1,196 @@
+  body {
+  --background: #121c29;
+  --primary-color: #bad8ff;
+  --accent-color: #ffde96;
+  --tertiary-color: #b7ebef;
+  --success: #aed4ae;
+  --neutral: #696f7e;
+  --danger: #f890ac;
+  --warning: #ffaa71;
+  --border: var(--neutral);
+  --gradient: linear-gradient(135deg, #f890ac, #ffaa71, #ffde96, #aed4ae, #bad8ff, #dcbaff);
+  --heart: shape(from 50% 91%, line to 90% 50%, arc to 50% 9%  of 1%, arc to 10% 50% of 1%);
+}
+
+h1, h2, h3 { text-align: center }
+h2 { margin: 0 0 36px }
+h2, h3 { margin: 42px 0 36px }
+
+body {
+  background: var(--background);
+  color: rgba(255, 255, 255, 0.76);
+  padding: 32px 32px 54px;
+}
+
+body > section {
+  margin: 64px 0;
+  padding-bottom: 64px;
+  border-bottom: solid 1px var(--border);
+}
+body > section:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+code { white-space: pre-line }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.container > div {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.example {
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  padding: 24px;
+  background: #505457;
+  border-width: 10px;
+}
+
+.border-style .example {
+  border-color: var(--accent-color);
+}
+
+.logical .example {
+  height: auto;
+  width: auto;
+}
+
+.logical-start .example {
+  color: var(--accent-color);
+  border-block-start: solid 5px var(--accent-color);
+}
+
+.logical-end .example {
+  color: var(--primary-color);
+  border-block-end: solid 5px var(--primary-color);
+}
+
+.border-image .example {
+  border: solid 50px;
+  border-image: url(./border.svg) 50;
+}
+.border-image .example.rectangle { width: 300px }
+.border-image-repeat .example { 
+  width: auto;
+  flex-basis: 10px;
+  flex-wrap: nowrap;
+  flex-grow: 1; 
+}
+
+.outline { gap: 0 }
+
+.outline :nth-child(2 of .example) {
+  border: solid 10px white;
+  border-image: var(--gradient) 1;
+  outline: solid 10px white;
+}
+
+.outline-styles { gap: 42px }
+.outline-styles .example { outline: solid 10px white }
+
+.offset { gap: 42px }
+.offset .example.gradient {
+  border: solid 10px white;
+  border-image: var(--gradient) 1;
+}
+.offset .example.outline {
+  outline: solid 10px white;
+}
+
+.box-shadow .example {
+  margin: 30px;
+  border: dotted 10px white;
+  outline: dashed 3px black;
+  outline-offset: 24px;
+  box-shadow: 
+    /* x-offset | y-offset | blur | spread */
+    0 0 0 10px #f890ac,
+    0 0 0 20px #ffaa71,
+    0 0 0 30px #ffde96,
+    /* inset | x-offset | y-offset | blur | spread */
+    inset 0 0 0 10px #aed4ae,
+    inset 0 0 0 20px #bad8ff,
+    inset 0 0 0 30px #dcbaff;
+}
+
+
+.example.box-shadow {
+  margin: 30px;
+  outline-offset: 24px;
+  box-shadow: 
+    /* x-offset | y-offset | blur | spread */
+    0 0 0 10px #f890ac,
+    0 0 0 20px #ffaa71,
+    0 0 0 30px #ffde96,
+    /* inset | x-offset | y-offset | blur | spread */
+    inset 0 0 0 10px #aed4ae,
+    inset 0 0 0 20px #bad8ff,
+    inset 0 0 0 30px #dcbaff;
+}
+
+.circle .example { border-radius: 50% }
+.heart .example { clip-path: var(--heart) }
+
+.shape .example.border { border: dotted 10px white }
+.shape .example.gradient { 
+  border: solid 10px white;
+  border-image: var(--gradient) 1;
+}
+.shape .example.border-image {
+  border: solid 50px white;
+  border-image: url(./border.svg) 50;
+}
+.shape .example.outline { outline: solid 10px white }
+.shape .example.box-shadow {
+  box-shadow: 
+    /* x-offset | y-offset | blur | spread */
+    0 0 0 10px #f890ac,
+    0 0 0 20px #ffaa71,
+    0 0 0 30px #ffde96,
+    /* inset | x-offset | y-offset | blur | spread */
+    inset 0 0 0 10px #aed4ae,
+    inset 0 0 0 20px #bad8ff,
+    inset 0 0 0 30px #dcbaff;
+}
+
+.drop-shadow {
+  gap: 36px;
+  filter: 
+    drop-shadow(3px -3px #f890ac)
+    drop-shadow(-3px -3px #f890ac)
+    drop-shadow(0 4px #f890ac)
+
+    drop-shadow(3px -3px #ffde96)
+    drop-shadow(-3px -3px #ffde96)
+    drop-shadow(0 4px #ffde96)
+
+    drop-shadow(3px -3px #dcbaff)
+    drop-shadow(-3px -3px #dcbaff)
+    drop-shadow(0 4px #dcbaff)
+}
+
+.drop-shadow .heart-group { position: relative }
+
+.drop-shadow .example.small {
+  position: absolute;
+  background: lightgrey;
+  top: -6px;
+  right: -5px;
+  z-index: 2;
+  height: 10px;
+  width: 10px;
+}
